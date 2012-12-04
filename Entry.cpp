@@ -4,7 +4,7 @@
 #include "Entry.h"
 
 using std::cout;
-using std::ends;
+using std::endl;
 using std::string;
 
 template <typename V>
