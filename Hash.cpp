@@ -14,7 +14,7 @@ Hash<V>::Hash(int initialSize) {
 
 template <typename V>
 Hash<V>::~Hash() {
-
+  delete[] hashTable;
 }
 
 template <typename V>
@@ -33,16 +33,22 @@ int Hash<V>::hashFunction(string k) {
 
 template <typename V>
 void Hash<V>::insert(string k, V v) {
+  int location = hashFunction(k);
+
+  Entry<V>* entry = new Entry<V>(k, v);
 
 }
 
 template <typename V>
 V Hash<V>::lookUp(string k, V v) {
+  int location = hashFunction(k);
+
   return entry;
 }
 
 template <typename V>
 void Hash<V>::remove(string k, V v) {
+  int location = hashFunction(k);
 
 }
 

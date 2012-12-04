@@ -11,11 +11,11 @@ template <typename V>
 class Hash {
  private:
   V* hashTable;
+  int hashFunction(string k);
 
  public:
   Hash(int initialSize = 10);
   ~Hash();
-  int hashFunction(string k);
   void insert(string  k, V v);
   V lookUp(string k, V v);
   void remove(string k, V v);
